@@ -1,9 +1,12 @@
 import { Outlet } from "react-router-dom";
+import logo from "../logo.svg";
+import "../App.css";
 
 const MainLayout = () => {
   return (
-    <div>
-      <header>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
         <h1>React Motion</h1>
         <nav>
           <ul>

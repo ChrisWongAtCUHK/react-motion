@@ -5,6 +5,7 @@ const box = {
   height: 100,
   backgroundColor: "#ff0088",
   borderRadius: 5,
+  marginTop: "50px"
 };
 
 function App() {
