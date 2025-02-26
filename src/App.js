@@ -7,9 +7,9 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route path="rotate" element={<Rotate />} />
-          <Route path="scale" element={<Scale />} />
+        <Route exact path="/" element={<MainLayout />}>
+          <Route exact path="rotate" element={<Rotate />} />
+          <Route exact path="scale" element={<Scale />} />
         </Route>
       </Routes>
     </Router>
