@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import * as motion from "motion/react-client";
+import "./App.css";
+
+const box = {
+  width: 100,
+  height: 100,
+  backgroundColor: "#ff0088",
+  borderRadius: 5,
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <motion.div
+      style={box}
+      animate={{ rotate: 360 }}
+      transition={{ duration: 1 }}
+    />
   );
 }
 
