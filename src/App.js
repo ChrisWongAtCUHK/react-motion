@@ -6,14 +6,16 @@ const box = {
   height: 100,
   backgroundColor: "#ff0088",
   borderRadius: 5,
-}
+};
 
 function App() {
   return (
     <motion.div
       style={box}
-      animate={{ rotate: 360 }}
-      transition={{ duration: 1 }}
+      animate={{
+        scale: 2,
+        transition: { duration: 2 },
+      }}
     />
   );
 }
