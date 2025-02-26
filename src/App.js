@@ -1,23 +1,19 @@
-import * as motion from "motion/react-client";
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import Rotate from "./pages/Rotate";
+import Scale from "./pages/Scale";
 
-const box = {
-  width: 100,
-  height: 100,
-  backgroundColor: "#ff0088",
-  borderRadius: 5,
-};
-
-function App() {
+const App = () => {
   return (
-    <motion.div
-      style={box}
-      animate={{
-        scale: 2,
-        transition: { duration: 2 },
-      }}
-    />
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route path="rotate" element={<Rotate />} />
+          <Route path="scale" element={<Scale />} />
+        </Route>
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
